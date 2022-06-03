@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#particles-js{
+    
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+.logo h2{
+    color: white;
+}
+.couleur-texte{
+    color: #1E90FF;
+}
+.trailer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.trailer.active{
+    visibility: visible;
+    opacity: 1;
+    
+}
+.trailer.active video{
+    transform:scale(1);
+}
+.video-container .close{
+    position: absolute;
+    top: 100%;
+    right: 25px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.trailer video{
+    position: relative;
+    width: 80%;
+    *max-width: 800px;
+    transform: scale(0);
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+    outline: none;
+    transition: all 0.3s;
+}
+@media (max-width:991px){
+    .trailer video{
+        max-width: 90%;
+    }
+}
+.close{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+}
+.coeur {
+    text-align: center;
+    padding: 12px 24px;
+    color: #fff;
+    border-radius: 5px;
+    background: #1E90FF;
+    box-shadow: 0 0 0 0 rgba(30, 144, 255, 0.7);
+    animation: battement 2s infinite cubic-bezier(.66, 0, 0, 1);
+    text-decoration: none;
+    outline: none;
+  }
+  @keyframes battement {
+    to {
+      box-shadow: 0 0 0 30px rgba(255, 71, 84, 0);
+    }
+  }
+
