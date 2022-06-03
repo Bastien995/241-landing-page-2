@@ -81,4 +81,7 @@
       box-shadow: 0 0 0 30px rgba(255, 71, 84, 0);
     }
   }
-
+.back{
+    background-color: #fff;
+    height: 100px;
+}
