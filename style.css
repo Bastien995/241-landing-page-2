@@ -75,6 +75,7 @@
     animation: battement 2s infinite cubic-bezier(.66, 0, 0, 1);
     text-decoration: none;
     outline: none;
+    border: none;
   }
   @keyframes battement {
     to {
