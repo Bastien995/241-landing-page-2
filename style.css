@@ -1,31 +1,182 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 #particles-js{
-    
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
+  
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
 }
 .couleur-texte{
-    color: #1E90FF;
+  color: #1E90FF;
 }
 .coeur {
-    text-align: center;
-    padding: 12px 24px;
-    color: #fff;
-    border-radius: 5px;
-    background: #1E90FF;
-    box-shadow: 0 0 0 0 rgba(30, 144, 255, 0.7);
-    animation: battement 2s infinite cubic-bezier(.66, 0, 0, 1);
-    text-decoration: none;
-    outline: none;
-    border: none;
+  text-align: center;
+  padding: 12px 24px;
+  color: #fff;
+  border-radius: 5px;
+  background: #1E90FF;
+  box-shadow: 0 0 0 0 rgba(30, 144, 255, 0.7);
+  animation: battement 2s infinite cubic-bezier(.66, 0, 0, 1);
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+@keyframes battement {
+  to {
+    box-shadow: 0 0 0 30px rgba(255, 71, 84, 0);
   }
-  @keyframes battement {
-    to {
-      box-shadow: 0 0 0 30px rgba(255, 71, 84, 0);
-    }
+}
+.mobileBtn .play{
+  display: none;
+}
+.flex{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+
+}
+.flex2{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  width: 350px;
+
+}
+@media (max-width:960px){
+  .mobileBtn{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+  .mobileBtn .play{
+    display: block;
+  }
+  .mobileBtn span{
+    display: none;
+  }
+}
+.trailer{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  background-color: rgba(0, 0, 0, 0.742);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.trailer.active{
+  visibility: visible;
+  opacity: 1;
+  
+}
+.trailer.active video{
+  transform:scale(1);
+}
+.video-container .close{
+  position: absolute;
+  top: 100%;
+  right: 25px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.trailer video{
+  position: relative;
+  width: 80%;
+  *max-width: 800px;
+  transform: scale(0);
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+  outline: none;
+  transition: all 0.3s;
+}
+@media (max-width:991px){
+  .trailer video{
+      max-width: 90%;
+  }
+}
+.close{
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+}
+.dflex{
+align-items: center;
+display: flex !important;
+justify-content: space-between !important;
+width: 100%;
+}
+/* ----------------------modifie cette partie chez toi----------------------------- */
+.footer {
+/*height: 50px;
+background-color: rgba(0, 0, 0, 0.645);
+position: fixed;
+bottom: 0;
+width: 100%;
+left: 0;
+padding-top: 1rem;*/
+/* From https://css.glass */
+background: rgba(0, 0, 0, 0.2);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+*border-top: 1px solid rgba(255, 255, 255, 0.3);
+width: 100%;
+position: fixed;
+bottom: 0;
+left: 0;
+padding-top: 1rem;
+
+}
+
+/*.flex {
+gap: 20px;
+align-items: center;
+justify-content: space-between;
+}*/
+
+@media (max-width:960px) {
+.mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  font-size: smaller;
+}
+.flex2 {
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  font-size: smaller;
+}
+
+.footer {
+  height: 80px;
+  padding: .5rem
+}
+
+p {
+  margin: 5px !important;
+}
+}
+.flex3 {
+display: flex;
+gap: 20px;
+}
